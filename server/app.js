@@ -15,3 +15,4 @@ connectDB();
 app.use("/api/profile", profileRoutes);
 
 app.listen(5000, () => console.log("Server running"));// Express server initialized
+// Express server initialized
