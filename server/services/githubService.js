@@ -10,4 +10,4 @@ export const fetchGitHubData = async (username) => {
     user: user.data,
     repos: repos.data,
   };
-};
+};// GitHub API integration started
