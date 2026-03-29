@@ -1,3 +1,4 @@
 // connected frontend with backend API 27 march
 // displaying fetched github data in UI 28 march
 // implemented scoring algorithm for portfolio evaluation 30 march
+// added charts for portfolio analysis 29 march
