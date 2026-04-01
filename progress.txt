@@ -2,3 +2,4 @@
 // displaying fetched github data in UI 28 march
 // implemented scoring algorithm for portfolio evaluation 30 march
 // added charts for portfolio analysis 29 march
+// improved UI and fixed minor bugs 1 april
