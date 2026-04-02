@@ -4,3 +4,4 @@
 // added charts for portfolio analysis 29 march
 // improved UI and fixed minor bugs 1 april
 // added radar chart and heatmap visualization 31 march
+// integrated mongodb database for storing reports 2 april
