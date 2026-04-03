@@ -10,6 +10,12 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Hello! Backend is running.");
+});
+
+// Your API routes
 app.use("/api/profile", require("./routes/profileRoutes"));
 
-app.listen(5000, () => console.log("Server running"));
+app.listen(process.env.PORT || 5000, () => console.log("Server running"));
