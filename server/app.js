@@ -1,19 +1,15 @@
-import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import profileRoutes from "./routes/profileRoutes.js";
-import connectDB from "./config/db.js";
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const connectDB = require("./config/db");
 
-dotenv.config();
 const app = express();
+
+connectDB();
 
 app.use(cors());
 app.use(express.json());
 
-connectDB();
+app.use("/api/profile", require("./routes/profileRoutes"));
 
-app.use("/api/profile", profileRoutes);
-
-app.listen(5000, () => console.log("Server running"));// Express server initialized
-// Express server initialized
-// Express server initialized with middleware
+app.listen(5000, () => console.log("Server running"));

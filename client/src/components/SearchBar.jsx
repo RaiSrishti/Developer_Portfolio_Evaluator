@@ -1,22 +1,18 @@
 import { useState } from "react";
+import API from "../utils/api";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
   const [username, setUsername] = useState("");
 
+  const handleSearch = async () => {
+    const res = await API.get(`/profile/${username}`);
+    window.location.href = `/report/${username}`;
+  };
+
   return (
-    <div className="flex gap-2">
-      <input
-        className="border p-2 rounded w-full"
-        placeholder="Enter GitHub username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <button
-        className="bg-blue-500 text-white px-4 rounded"
-        onClick={() => onSearch(username)}
-      >
-        Search
-      </button>
+    <div>
+      <input onChange={(e) => setUsername(e.target.value)} />
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 }

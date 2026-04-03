@@ -1,13 +1,16 @@
 export default function RepoList({ repos }) {
-    return (
-      <div>
-        <h2 className="font-bold text-lg">Repositories</h2>
-        {repos.map((repo) => (
-          <div key={repo.id} className="border p-2 my-2">
-            <p>{repo.name}</p>
-            <p>⭐ {repo.stargazers_count}</p>
-          </div>
-        ))}
-      </div>
-    );
-  }
+  if (!repos.length) return <p>No repositories found</p>;
+
+  return (
+    <div>
+      <h2>Top Repositories</h2>
+      {repos.map((repo, i) => (
+        <div key={i} style={{ margin: "10px", border: "1px solid gray" }}>
+          <h3>{repo.name}</h3>
+          <p>{repo.description}</p>
+          <p>⭐ {repo.stars} | 🍴 {repo.forks}</p>
+        </div>
+      ))}
+    </div>
+  );
+}

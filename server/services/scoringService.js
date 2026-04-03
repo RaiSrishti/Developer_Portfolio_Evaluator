@@ -1,44 +1,40 @@
-// const calculateScores = (user, repos, events) => {
-//     const activity = Math.min(events.length * 2, 25);
-  
-//     const codeQuality = Math.min(
-//       repos.filter(r => r.description).length * 2,
-//       20
-//     );
-  
-//     const diversity = Math.min(
-//       new Set(repos.map(r => r.language)).size,
-//       20
-//     );
-  
-//     const stars = repos.reduce((a, r) => a + r.stargazers_count, 0);
-//     const community = Math.min(Math.log(stars + 1) * 5, 20);
-  
-//     let hiringReady = 0;
-//     if (user.bio) hiringReady += 5;
-//     if (user.blog) hiringReady += 5;
-//     if (user.email) hiringReady += 5;
-  
-//     const overall =
-//       activity * 0.25 +
-//       codeQuality * 0.2 +
-//       diversity * 0.2 +
-//       community * 0.2 +
-//       hiringReady * 0.15;
-  
-//     return { activity, codeQuality, diversity, community, hiringReady, overall };
-//   };
-  
-//   module.exports = { calculateScores };
+exports.calculateScore = (repos, profile) => {
+  // Activity (0–25)
+  let activity = Math.min(repos.length * 2, 25);
 
-export const calculateScore = (data) => {
-  let score = 0;
+  // Diversity (0–20)
+  let languages = new Set(repos.map(r => r.language).filter(Boolean));
+  let diversity = Math.min(languages.size * 2, 20);
 
-  score += data.repos.length * 2;
+  // Community (0–20) → NORMALIZED
+  let community = Math.min(Math.log10(profile.followers + 1) * 5, 20);
 
-  data.repos.forEach((repo) => {
-    score += repo.stargazers_count;
-  });
+  // Code Quality (0–20)
+  let codeQuality = Math.min(
+    repos.filter(r => r.description).length * 2,
+    20
+  );
 
-  return score;
+  // Hiring Readiness (0–15)
+  let hiring = 0;
+  if (profile.bio) hiring += 5;
+  if (profile.blog) hiring += 5;
+  if (profile.email) hiring += 5;
+
+  // Overall (0–100)
+  let overall =
+    activity +
+    diversity +
+    community +
+    codeQuality +
+    hiring;
+
+  return {
+    activity,
+    diversity,
+    community: Math.round(community),
+    codeQuality,
+    hiringReady: hiring,
+    overall: Math.round(overall)
+  };
 };

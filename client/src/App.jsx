@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Report from "./pages/Report";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -12,3 +12,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
