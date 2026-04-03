@@ -3,23 +3,23 @@ const { getUserProfile, getReposData } = require("../services/githubService");
 const { calculateScore } = require("../services/scoringService");
 
 exports.getProfile = async (req, res) => {
-  const { username } = req.params.username.toLowerCase();
+  const username = req.params.username.toLowerCase(); // ✅ fixed here
 
   try {
-    // ✅ Check cache
+    // ✅ Check cache in DB
     const cached = await Report.findOne({ username });
     if (cached) return res.json(cached);
 
-    // ✅ Fetch data
+    // ✅ Fetch GitHub user profile
     const profile = await getUserProfile(username);
 
-    // ✅ THIS IS THE FIX
+    // ✅ Fetch repos data
     const { repos, topRepos, languages } = await getReposData(username);
 
-    // ✅ Score
+    // ✅ Calculate score
     const scores = calculateScore(repos, profile);
 
-    // ✅ Save to DB
+    // ✅ Save to MongoDB
     const report = await Report.create({
       username,
       avatarUrl: profile.avatar_url,
@@ -36,7 +36,7 @@ exports.getProfile = async (req, res) => {
     res.json(report);
 
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     res.status(500).json({ error: "Error fetching data" });
   }
 };
