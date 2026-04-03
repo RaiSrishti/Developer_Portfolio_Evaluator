@@ -3,7 +3,7 @@ const { getUserProfile, getReposData } = require("../services/githubService");
 const { calculateScore } = require("../services/scoringService");
 
 exports.getProfile = async (req, res) => {
-  const { username } = req.params;
+  const { username } = req.params.username.toLowerCase();
 
   try {
     // ✅ Check cache
