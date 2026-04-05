@@ -5,3 +5,4 @@
 // improved UI and fixed minor bugs 1 april
 // added radar chart and heatmap visualization 31 march
 // integrated mongodb database for storing reports 2 april
+// refactored codebase for better structure 5 april
