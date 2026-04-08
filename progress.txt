@@ -8,3 +8,4 @@
 // refactored codebase for better structure 5 april
 // deployed backend on render with environment variables 6 april
 // deployed frontend on vercel and connected api 7 april
+// fixed cors and api url issues in production 8 april
