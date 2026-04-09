@@ -9,3 +9,4 @@
 // deployed backend on render with environment variables 6 april
 // deployed frontend on vercel and connected api 7 april
 // fixed cors and api url issues in production 8 april
+// deployed frontend on vercel with env config and routing fixes 9 april
