@@ -51,8 +51,8 @@ Portfolio-evaluator/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/ananya-kushi07/Portfolio-evaluator.git
-cd Portfolio-evaluator
+git clone https://github.com/RaiSrishti/Developer_Portfolio_Evaluator.git
+cd Developer_Portfolio_Evaluator
 ```
 
 ### 2️⃣ Backend Setup
