@@ -87,11 +87,11 @@ Example Output
 - Language distribution 📚
 - Portfolio score breakdown 📈
 
-🚧 Future Improvements
-🔐 Authentication system
-📄 Downloadable report
-📊 Advanced analytics
-🌍 Multi-user comparison
+### Future Improvements:
+- Authentication system
+- Downloadable report
+- Advanced analytics
+- Multi-user comparison
 
 👩‍💻 Author
 Srishti Rai M
