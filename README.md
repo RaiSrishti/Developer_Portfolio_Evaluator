@@ -1,10 +1,10 @@
-# 🚀 Portfolio Evaluator
+#  Portfolio Evaluator
 
 A full-stack web application that analyzes a GitHub user's profile and provides insights like top repositories, language usage, and overall portfolio score.
 
 ---
 
-## 📌 Features
+## Features
 
 - 🔍 Fetch GitHub user profile data
 - 📊 Analyze repositories and contributions
@@ -14,7 +14,7 @@ A full-stack web application that analyzes a GitHub user's profile and provides 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React (Vite)
@@ -32,7 +32,7 @@ A full-stack web application that analyzes a GitHub user's profile and provides 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 Portfolio-evaluator/
 │
@@ -82,7 +82,7 @@ Backend (Render)
 Root Directory: server
 Start Command: node app.js
 
-📊 Example Output
+Example Output
 Top repositories with stars ⭐
 Language distribution 📚
 Portfolio score breakdown 📈
@@ -94,5 +94,4 @@ Portfolio score breakdown 📈
 🌍 Multi-user comparison
 
 👩‍💻 Author
-
 Srishti Rai M
