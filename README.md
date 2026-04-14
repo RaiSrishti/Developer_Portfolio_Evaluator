@@ -56,36 +56,36 @@ cd Portfolio-evaluator
 ```
 
 ### 2️⃣ Backend Setup
-cd server
-npm install
+- cd server
+- npm install
 
-Create .env file:
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-CLIENT_URL=http://localhost:5173
+- Create .env file:
+- PORT=5000
+- MONGODB_URI=your_mongodb_connection_string
+- CLIENT_URL=http://localhost:5173
 
 Run backend:
-npm run dev
+- npm run dev
 
 ### 3️⃣ Frontend Setup
-cd client
-npm install
-npm run dev
+- cd client
+- npm install
+- npm run dev
 
 🌐 Deployment
-Frontend (Vercel)
-Root Directory: client
-Build Command: npm run build
-Output Directory: dist
+- Frontend (Vercel)
+- Root Directory: client
+- Build Command: npm run build
+- Output Directory: dist
 
 Backend (Render)
-Root Directory: server
-Start Command: node app.js
+- Root Directory: server
+- Start Command: node app.js
 
 Example Output
-Top repositories with stars ⭐
-Language distribution 📚
-Portfolio score breakdown 📈
+- Top repositories with stars ⭐
+- Language distribution 📚
+- Portfolio score breakdown 📈
 
 🚧 Future Improvements
 🔐 Authentication system
