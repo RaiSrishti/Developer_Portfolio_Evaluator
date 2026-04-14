@@ -33,7 +33,7 @@ A full-stack web application that analyzes a GitHub user's profile and provides 
 ---
 
 ## 📁 Project Structure
-
+```
 Portfolio-evaluator/
 │
 ├── client/ # Frontend (React + Vite)
@@ -44,7 +44,7 @@ Portfolio-evaluator/
 │ ├── routes/
 │ └── services/
 
----
+```
 
 ## ⚙️ Setup Instructions
 
