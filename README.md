@@ -53,8 +53,9 @@ Portfolio-evaluator/
 ```bash
 git clone https://github.com/ananya-kushi07/Portfolio-evaluator.git
 cd Portfolio-evaluator
+```
 
-2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 cd server
 npm install
 
@@ -66,7 +67,7 @@ CLIENT_URL=http://localhost:5173
 Run backend:
 npm run dev
 
-3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup
 cd client
 npm install
 npm run dev
